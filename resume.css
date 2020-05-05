@@ -1,0 +1,157 @@
+*{
+    /* outline: 2px dashed green; */
+    margin: 0;
+    padding:0;
+}
+/* @media screen and (max-width: 600px) {
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "q"
+        "h"
+        "e"
+        "b"
+        "f";
+}
+ */
+/* step one - build your grid */
+.container {
+    padding:10%;
+    /* height: 100%; */
+    display: grid;
+    grid-gap: 25px;
+    /* this will be  the same for everyone */
+    grid-template-columns: repeat(12, 1fr);
+    /* this will be customized, based on your grid, use pixels or % */
+    grid-template-rows: auto;
+    /* use letters from step 2 to build the grid */
+    grid-template-areas: 
+    "d d o o o o h h h h h h" 
+    "d d a a a a w w w w w w"  
+    "d d a a a a s s s s s s"
+    "d d a a a a e e e e e e"
+    "d d a a a a c c c c c c";
+
+}
+
+li{
+    font-weight: 500;
+    padding: 3px;
+}
+
+.date{
+    font-weight: 300;
+}
+
+body{
+    font-size: 1.5em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+h1{
+    font-size: 50px;
+}
+
+h2{
+    font-size: 25px
+}
+
+h3{
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(51, 51, 153)
+
+}
+
+/* step three - build a grid that becomes active when the pixels are 800px or less */
+@media screen and (max-width: 800px) {
+
+    .container{
+        display: grid;
+        grid-gap: 15px;
+        /* grid is only one column, keep this way */
+        grid-template-columns: 1fr;
+        /* you can enter values, or auto will adjust the box sizes based on content */
+        grid-template-rows: auto;
+        grid-template-areas:
+        "o"
+        "h"
+        "a"
+        "w"
+        "s"
+        "e"
+        "c";
+    }
+}
+
+/* step 1 - assign each of your sections a letter */
+
+.container {
+    grid-area: o;
+    padding-top: 4px;
+    font-family: 'Open Sans', sans-serif;
+    background-repeat: no-repeat;
+}
+
+
+.header {
+    grid-area: o;
+    padding-top: 5px;
+    padding-top: 70px;
+    border-bottom: rgb(51, 51, 153) 10px;
+    border-style: solid;
+    border-top: none;
+    border-right: none;
+    Border-left: none;
+    border-radius: 10px;
+
+    
+
+}
+
+.education {
+    grid-area: e;
+    padding-left: 100px;
+    padding-top: 85px;
+    font-size: 20px;
+}
+
+.skills {
+    grid-area: s;
+    padding-left: 100px;
+    padding-top: 75px;
+    font-size: 20px;
+}
+
+.work-experience {
+    grid-area: w;
+    padding-left: 100px;
+    padding-top: 50px;
+    font-size: 20px;
+}
+
+.contacts {
+    grid-area: a;
+    padding-top: 375px;
+    font-size: 20px;
+
+}
+
+.about {
+    grid-area: a;
+    padding-top: 50px;
+    font-size: 20px;
+    border-right:  rgb(51, 51, 153) 10px solid;
+
+}
+.name {
+    grid-area: o;
+}

@@ -1,0 +1,132 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    font: black;
+}
+li{
+    display: inline;
+    padding: 30px;
+    font-size: 25px;
+    padding-right: 30px;
+    }
+img{
+  width: 300px;
+  padding-left: 20px;
+}
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none; 
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.content{
+    padding-left: 50px;
+}
+
+.svg-insta{
+    height: 10%;
+    width: 20%
+}
+
+.svg-linked{
+    height: 10%;
+    width: 20%
+}
+@media screen and (min-width: 1080px) {
+
+    .container{
+        display: grid;
+        grid-gap: 15px;
+        /* grid is only one column, keep this way */
+        grid-template-columns: 1fr;
+        /* you can enter values, or auto will adjust the box sizes based on content */
+        grid-template-rows: auto;
+        grid-template-areas:
+        "o o h h"
+        "o o a a"
+        "o o p p"
+        "o o w w"
+        "s s e e";
+    }
+    h1{
+      padding-left: 200px;
+      font-size: 20px;
+      color: white;
+      
+  }
+    .logo{
+      grid-area: o;
+      width: 200%;
+      padding-left: 0px;
+      padding-right: 0px;
+      border-right: solid black;
+    }
+    li{
+      display: inline;
+      grid-area: h;
+      font-size: 40px;
+      padding: 40px;
+      padding-right: 400px;
+      padding-top: 700px;
+    }
+    img{
+      width: 600px;
+      grid-area: a;
+      padding-left:130px;
+      padding-top: 50px;
+    }
+    .content{
+      grid-area: w;
+      width: 300px;
+      padding-left: 300px;
+    }
+    .svg-linked{
+      height: 10%;
+      width: 20%;
+      grid-area: s;
+      transform: translate(0px, -200px);
+  }
+  .svg-insta{
+    height: 10%;
+    width: 20%;
+    grid-area: e;
+    transform: translate(125px, -115px);
+     }
+  
+}
+
+.logo{
+  grid-area: o;
+  width: 350px;
+  background-color: white;
+}
+.wasp{
+  grid-area: a;
+}
+
+.content{
+  grid-area: w;
+  width: 300px;
+}
+.footer{
+  grid-area: s;
+  width: 350px;
+}
+nav{
+grid-area: h;
+}
+h1{
+    padding-left: 200px;
+    font-size: 50px;
+    color: white;
+    
+}

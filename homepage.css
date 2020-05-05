@@ -1,0 +1,63 @@
+*{
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    font: black;
+}
+
+
+
+
+
+@media screen and (min-width: 1080px) {
+
+    .container{
+        display: grid;
+        grid-gap: 15px;
+        /* grid is only one column, keep this way */
+        grid-template-columns: 1fr;
+        /* you can enter values, or auto will adjust the box sizes based on content */
+        grid-template-rows: auto;
+        grid-template-areas:
+        "o"
+        "h";
+    }
+    .logo{
+      grid-area: o;
+      width: 40%;
+      padding-left: 450px;
+      padding-right: 0px;
+    }
+    nav{
+        grid-area: h;
+        padding-left: 400px;
+    }
+    li{
+        display: inline;
+        padding: 60px;
+        font-size: 40px;
+        padding-left: 110px;
+        
+    }
+    
+    a:link {
+      text-decoration: none;
+    }
+    
+    a:visited {
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: none; 
+    }
+    
+    a:active {
+      text-decoration: none;
+    }
+    
+    .content{
+        padding-left: 50px;
+    }
+}
+
+
